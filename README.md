@@ -57,7 +57,7 @@ A thin wrapper to facilitate interactions with the PlunetAPI.
 Clone the repo
 
    ```sh
-   git clone https://github.com/kuhnemann/plunet-api.git
+   git clone https://github.com/kuhnemann/plunetapi.git
    ```
 
 Or install via pip
@@ -135,7 +135,7 @@ plunet.DataJob30.factory.PriceLine()
 
 
 
-See the [open issues](https://github.com/kuhnemann/plunet-api/issues) for a full list of proposed features (and known
+See the [open issues](https://github.com/kuhnemann/plunetapi/issues) for a full list of proposed features (and known
 issues).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -176,9 +176,9 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-Your Name - [@hkuhnemann](https://twitter.com/hkuhnemann) - hello@yellownape.se
+Henrik Kühnemann - [@hkuhnemann](https://twitter.com/hkuhnemann) - hello@yellownape.se
 
-Project Link: [https://github.com/kuhnemann/plunet-api](https://github.com/kuhnemann/plunet-api)
+Project Link: [https://github.com/kuhnemann/plunetapi](https://github.com/kuhnemann/plunetapi)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -191,25 +191,25 @@ Project Link: [https://github.com/kuhnemann/plunet-api](https://github.com/kuhne
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[contributors-shield]: https://img.shields.io/github/contributors/kuhnemann/plunet-api.svg?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/kuhnemann/plunetapi.svg?style=for-the-badge
 
-[contributors-url]: https://github.com/kuhnemann/plunet-api/graphs/contributors
+[contributors-url]: https://github.com/kuhnemann/plunetapi/graphs/contributors
 
-[forks-shield]: https://img.shields.io/github/forks/kuhnemann/plunet-api.svg?style=for-the-badge
+[forks-shield]: https://img.shields.io/github/forks/kuhnemann/plunetapi.svg?style=for-the-badge
 
-[forks-url]: https://github.com/kuhnemann/plunet-api/network/members
+[forks-url]: https://github.com/kuhnemann/plunetapi/network/members
 
-[stars-shield]: https://img.shields.io/github/stars/kuhnemann/plunet-api.svg?style=for-the-badge
+[stars-shield]: https://img.shields.io/github/stars/kuhnemann/plunetapi.svg?style=for-the-badge
 
-[stars-url]: https://github.com/kuhnemann/plunet-api/stargazers
+[stars-url]: https://github.com/kuhnemann/plunetapi/stargazers
 
-[issues-shield]: https://img.shields.io/github/issues/kuhnemann/plunet-api.svg?style=for-the-badge
+[issues-shield]: https://img.shields.io/github/issues/kuhnemann/plunetapi.svg?style=for-the-badge
 
-[issues-url]: https://github.com/kuhnemann/plunet-api/issues
+[issues-url]: https://github.com/kuhnemann/plunetapi/issues
 
-[license-shield]: https://img.shields.io/github/license/kuhnemann/plunet-api.svg?style=for-the-badge
+[license-shield]: https://img.shields.io/github/license/kuhnemann/plunetapi.svg?style=for-the-badge
 
-[license-url]: https://github.com/kuhnemann/plunet-api/LICENSE
+[license-url]: https://github.com/kuhnemann/plunetapi/LICENSE
 
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 
