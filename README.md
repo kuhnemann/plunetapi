@@ -209,7 +209,7 @@ Project Link: [https://github.com/kuhnemann/plunetapi](https://github.com/kuhnem
 
 [license-shield]: https://img.shields.io/github/license/kuhnemann/plunetapi.svg?style=for-the-badge
 
-[license-url]: https://github.com/kuhnemann/plunetapi/LICENSE
+[license-url]: https://github.com/kuhnemann/plunetapi/blob/main/LICENSE
 
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 
