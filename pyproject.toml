@@ -42,5 +42,5 @@ push = true
     'current_version = "{version}"',
 ]
 
-"src/plunet-api/__init__.py" = ["{version}"]
+"src/plunetapi/__init__.py" = ["{version}"]
 

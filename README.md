@@ -84,7 +84,7 @@ The wrapper is thin by design and intended to be used by a client. For example s
 
 ```sh
 from plunetapi import PlunetAPI
-
+from typing import Union, Callable
 
 class PlunetClient:
     def __init__(self, base_url: str):
@@ -176,7 +176,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-Henrik Kühnemann - [@hkuhnemann](https://twitter.com/hkuhnemann) - hello@yellownape.se
+Henrik Kühnemann - [@hkuhnemann](https://twitter.com/hkuhnemann) - [hello@yellownape.se](mailto:hello@yellownape.se)
 
 Project Link: [https://github.com/kuhnemann/plunetapi](https://github.com/kuhnemann/plunetapi)
 
