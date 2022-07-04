@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "plunetapi"
-version = "0.1.0"
+version = "0.1.1"
 description = "Thin wrapper for the Plunet SOAP API."
 readme = "README.md"
 authors = [{ name = "Henrik Kühnemann", email = "hello@yellownape.se" }]
@@ -40,6 +40,7 @@ push = true
 [tool.bumpver.file_patterns]
 "pyproject.toml" = [
     'current_version = "{version}"',
+    'version = "{version}"',
 ]
 
 "src/plunetapi/__init__.py" = ["{version}"]
