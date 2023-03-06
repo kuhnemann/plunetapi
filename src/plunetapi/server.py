@@ -1,19 +1,23 @@
 """
-This code is released under the MIT License. Copyright © 2022 Henrik Kühnemann.
+This code is released under the MIT License. Copyright © 2023 Henrik Kühnemann.
 """
+from typing import Optional
 
 from .webservice import webservice_factory
 
 
 class PlunetAPI:
-    def __init__(self, base_url: str, cache_wsdl: bool = True):
+    def __init__(
+        self, base_url: str, cache_wsdl: bool = True, options: Optional[dict] = None
+    ):
         """
         :param base_url: Base URL for the Plunet instance.  For example, 'https://plunet_sandbox.companyname.se'
         """
         self.base_url = base_url
-        self.cache_wsdl = cache_wsdl
+        self.caching_client = cache_wsdl
         self._services = {}
         self.session_uuid = None
+        self.options = options if options else {}
 
     def __repr__(self) -> str:
         """
@@ -47,7 +51,9 @@ class PlunetAPI:
         try:
             return self._services[name]
         except KeyError:
-            self._services[name] = webservice_factory(self.base_url, name, self.cache_wsdl)
+            self._services[name] = webservice_factory(
+                self.base_url, name, self.caching_client, **self.options
+            )
             return self._services[name]
 
     @property
@@ -61,7 +67,9 @@ class PlunetAPI:
         try:
             return self._services[name]
         except KeyError:
-            self._services[name] = webservice_factory(self.base_url, name, self.cache_wsdl)
+            self._services[name] = webservice_factory(
+                self.base_url, name, self.caching_client, **self.options
+            )
             return self._services[name]
 
     @property
@@ -75,7 +83,9 @@ class PlunetAPI:
         try:
             return self._services[name]
         except KeyError:
-            self._services[name] = webservice_factory(self.base_url, name, self.cache_wsdl)
+            self._services[name] = webservice_factory(
+                self.base_url, name, self.caching_client, **self.options
+            )
             return self._services[name]
 
     @property
@@ -89,7 +99,9 @@ class PlunetAPI:
         try:
             return self._services[name]
         except KeyError:
-            self._services[name] = webservice_factory(self.base_url, name, self.cache_wsdl)
+            self._services[name] = webservice_factory(
+                self.base_url, name, self.caching_client, **self.options
+            )
             return self._services[name]
 
     @property
@@ -103,7 +115,9 @@ class PlunetAPI:
         try:
             return self._services[name]
         except KeyError:
-            self._services[name] = webservice_factory(self.base_url, name, self.cache_wsdl)
+            self._services[name] = webservice_factory(
+                self.base_url, name, self.caching_client, **self.options
+            )
             return self._services[name]
 
     @property
@@ -117,7 +131,9 @@ class PlunetAPI:
         try:
             return self._services[name]
         except KeyError:
-            self._services[name] = webservice_factory(self.base_url, name, self.cache_wsdl)
+            self._services[name] = webservice_factory(
+                self.base_url, name, self.caching_client, **self.options
+            )
             return self._services[name]
 
     @property
@@ -131,7 +147,9 @@ class PlunetAPI:
         try:
             return self._services[name]
         except KeyError:
-            self._services[name] = webservice_factory(self.base_url, name, self.cache_wsdl)
+            self._services[name] = webservice_factory(
+                self.base_url, name, self.caching_client, **self.options
+            )
             return self._services[name]
 
     @property
@@ -145,7 +163,9 @@ class PlunetAPI:
         try:
             return self._services[name]
         except KeyError:
-            self._services[name] = webservice_factory(self.base_url, name, self.cache_wsdl)
+            self._services[name] = webservice_factory(
+                self.base_url, name, self.caching_client, **self.options
+            )
             return self._services[name]
 
     @property
@@ -159,7 +179,9 @@ class PlunetAPI:
         try:
             return self._services[name]
         except KeyError:
-            self._services[name] = webservice_factory(self.base_url, name, self.cache_wsdl)
+            self._services[name] = webservice_factory(
+                self.base_url, name, self.caching_client, **self.options
+            )
             return self._services[name]
 
     @property
@@ -173,7 +195,9 @@ class PlunetAPI:
         try:
             return self._services[name]
         except KeyError:
-            self._services[name] = webservice_factory(self.base_url, name, self.cache_wsdl)
+            self._services[name] = webservice_factory(
+                self.base_url, name, self.caching_client, **self.options
+            )
             return self._services[name]
 
     @property
@@ -187,7 +211,9 @@ class PlunetAPI:
         try:
             return self._services[name]
         except KeyError:
-            self._services[name] = webservice_factory(self.base_url, name, self.cache_wsdl)
+            self._services[name] = webservice_factory(
+                self.base_url, name, self.caching_client, **self.options
+            )
             return self._services[name]
 
     @property
@@ -201,7 +227,9 @@ class PlunetAPI:
         try:
             return self._services[name]
         except KeyError:
-            self._services[name] = webservice_factory(self.base_url, name, self.cache_wsdl)
+            self._services[name] = webservice_factory(
+                self.base_url, name, self.caching_client, **self.options
+            )
             return self._services[name]
 
     @property
@@ -215,7 +243,9 @@ class PlunetAPI:
         try:
             return self._services[name]
         except KeyError:
-            self._services[name] = webservice_factory(self.base_url, name, self.cache_wsdl)
+            self._services[name] = webservice_factory(
+                self.base_url, name, self.caching_client, **self.options
+            )
             return self._services[name]
 
     @property
@@ -229,7 +259,9 @@ class PlunetAPI:
         try:
             return self._services[name]
         except KeyError:
-            self._services[name] = webservice_factory(self.base_url, name, self.cache_wsdl)
+            self._services[name] = webservice_factory(
+                self.base_url, name, self.caching_client, **self.options
+            )
             return self._services[name]
 
     @property
@@ -243,7 +275,9 @@ class PlunetAPI:
         try:
             return self._services[name]
         except KeyError:
-            self._services[name] = webservice_factory(self.base_url, name, self.cache_wsdl)
+            self._services[name] = webservice_factory(
+                self.base_url, name, self.caching_client, **self.options
+            )
             return self._services[name]
 
     @property
@@ -257,7 +291,9 @@ class PlunetAPI:
         try:
             return self._services[name]
         except KeyError:
-            self._services[name] = webservice_factory(self.base_url, name, self.cache_wsdl)
+            self._services[name] = webservice_factory(
+                self.base_url, name, self.caching_client, **self.options
+            )
             return self._services[name]
 
     @property
@@ -271,7 +307,9 @@ class PlunetAPI:
         try:
             return self._services[name]
         except KeyError:
-            self._services[name] = webservice_factory(self.base_url, name, self.cache_wsdl)
+            self._services[name] = webservice_factory(
+                self.base_url, name, self.caching_client, **self.options
+            )
             return self._services[name]
 
     @property
@@ -285,7 +323,9 @@ class PlunetAPI:
         try:
             return self._services[name]
         except KeyError:
-            self._services[name] = webservice_factory(self.base_url, name, self.cache_wsdl)
+            self._services[name] = webservice_factory(
+                self.base_url, name, self.caching_client, **self.options
+            )
             return self._services[name]
 
     @property
@@ -299,7 +339,9 @@ class PlunetAPI:
         try:
             return self._services[name]
         except KeyError:
-            self._services[name] = webservice_factory(self.base_url, name, self.cache_wsdl)
+            self._services[name] = webservice_factory(
+                self.base_url, name, self.caching_client, **self.options
+            )
             return self._services[name]
 
     @property
@@ -313,7 +355,9 @@ class PlunetAPI:
         try:
             return self._services[name]
         except KeyError:
-            self._services[name] = webservice_factory(self.base_url, name, self.cache_wsdl)
+            self._services[name] = webservice_factory(
+                self.base_url, name, self.caching_client, **self.options
+            )
             return self._services[name]
 
     @property
@@ -326,7 +370,9 @@ class PlunetAPI:
         try:
             return self._services[name]
         except KeyError:
-            self._services[name] = webservice_factory(self.base_url, name, self.cache_wsdl)
+            self._services[name] = webservice_factory(
+                self.base_url, name, self.caching_client, **self.options
+            )
             return self._services[name]
 
     @property
@@ -340,7 +386,9 @@ class PlunetAPI:
         try:
             return self._services[name]
         except KeyError:
-            self._services[name] = webservice_factory(self.base_url, name, self.cache_wsdl)
+            self._services[name] = webservice_factory(
+                self.base_url, name, self.caching_client, **self.options
+            )
             return self._services[name]
 
     @property
@@ -354,5 +402,7 @@ class PlunetAPI:
         try:
             return self._services[name]
         except KeyError:
-            self._services[name] = webservice_factory(self.base_url, name, self.cache_wsdl)
+            self._services[name] = webservice_factory(
+                self.base_url, name, self.caching_client, **self.options
+            )
             return self._services[name]

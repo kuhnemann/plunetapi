@@ -1,10 +1,15 @@
 from urllib.parse import urljoin
 
-from zeep import CachingClient, Client
+from zeep import CachingClient, Client, Transport
+from zeep.cache import InMemoryCache
 
 
-def webservice_factory(base_url: str, wsdl_name: str, caching_client: bool = True):
-    return WebService(base_url=base_url, wsdl_name=wsdl_name, caching_client=caching_client)
+def webservice_factory(
+    base_url: str, wsdl_name: str, caching_client: bool = True, **kwargs
+):
+    return WebService(
+        base_url=base_url, wsdl_name=wsdl_name, caching_client=caching_client, **kwargs
+    )
 
 
 class WebService:
@@ -12,7 +17,9 @@ class WebService:
     Class to expose Plunet Web Service API Services.
     """
 
-    def __init__(self, wsdl_name: str, base_url: str, caching_client: bool = True):
+    def __init__(
+        self, wsdl_name: str, base_url: str, caching_client: bool = True, **kwargs
+    ):
         """
         :param wsdl_name: Service name - for example DataItem30
         :param base_url: Base URL of the Plunet Web Service API, as a string.
@@ -23,7 +30,11 @@ class WebService:
         if caching_client is True:
             self._client = CachingClient(wsdl=self.service_url)
         else:
-            self._client = Client(wsdl=self.service_url)
+            if kwargs.get("cache"):
+                transport = Transport(cache=kwargs.get("cache"))
+            else:
+                transport = kwargs.get("transport")
+            self._client = Client(wsdl=self.service_url, transport=transport)
 
     def __dir__(self) -> list:
         """
