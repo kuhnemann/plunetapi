@@ -30,7 +30,10 @@ class PlunetAPI:
         Returns user-readable str with version and base url of the Plunet instance.
         :returns: A user-readable str with version and base url of the Plunet instance.
         """
-        return f"Plunet v{self.api_version} @ {self.base_url}"
+        try:
+            return f"Plunet v{self.plunet_version} @ {self.base_url}"
+        except:
+            return f"PlunetAPI v{self.api_version} @ {self.base_url} - BusinessManager 8.20 or older"
 
     @property
     def api_version(self) -> float:
@@ -39,6 +42,14 @@ class PlunetAPI:
         :return: Float representing the version the PlunetAPI
         """
         return self.PlunetAPI.getVersion()
+
+    @property
+    def plunet_version(self) -> float:
+        """
+        Exposing the version of the Plunet BusinessManager
+        :return: Float representing the version the PlunetAPI
+        """
+        return self.PlunetAPI.getPlunetVersion().data
 
     @property
     def PlunetAPI(self):

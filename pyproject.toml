@@ -18,9 +18,9 @@ classifiers = [
 ]
 keywords = ["plunet", "api", "translation", "localization", "tms"]
 dependencies = [
-    "zeep >= 4.1.0",
+    "zeep >= 4.3.1",
 ]
-requires-python = ">=3.8"
+requires-python = ">=3.9"
 
 [project.optional-dependencies]
 dev = ["black", "bumpver", "isort", "pip-tools", "pytest"]
